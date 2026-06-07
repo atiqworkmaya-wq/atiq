@@ -1,59 +1,53 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Career Exploration</title>
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    background:#f5f5f5;
+}
 
-<header>
-<h1>Career Exploration</h1>
-</header>
+header{
+    background:#003366;
+    color:white;
+    text-align:center;
+    padding:25px;
+}
 
-<nav>
-<a href="index.html">Home</a>
-<a href="career.html">Career</a>
-<a href="skills.html">Skills</a>
-<a href="plan.html">Development Plan</a>
-<a href="evidence.html">Evidence</a>
-<a href="reflection.html">Reflection</a>
-</nav>
+nav{
+    background:#222;
+    padding:15px;
+    text-align:center;
+}
 
-<section>
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+}
 
-<h2>Network Security Analyst</h2>
+nav a:hover{
+    color:#00ccff;
+}
 
-<h3>Job Responsibilities</h3>
+section{
+    background:white;
+    width:80%;
+    margin:20px auto;
+    padding:25px;
+    border-radius:10px;
+}
 
-<ul>
-<li>Monitor network traffic and security events.</li>
-<li>Identify and respond to cyber threats.</li>
-<li>Perform vulnerability assessments.</li>
-<li>Configure firewalls and security systems.</li>
-<li>Prepare security reports.</li>
-</ul>
+h2{
+    color:#003366;
+}
 
-<h3>Required Skills</h3>
+table{
+    width:100%;
+    border-collapse:collapse;
+}
 
-<ul>
-<li>Networking Fundamentals</li>
-<li>TCP/IP</li>
-<li>Linux Administration</li>
-<li>Wireshark</li>
-<li>Python Scripting</li>
-<li>Incident Response</li>
-</ul>
+table,th,td{
+    border:1px solid black;
+}
 
-<h3>Relevance to Modern Cybersecurity</h3>
-
-<p>
-Network Security Analysts protect organizations from cyberattacks,
-data breaches, malware, and unauthorized access. As organizations
-depend heavily on digital systems, this role is essential for
-maintaining security and business continuity.
-</p>
-
-</section>
-
-</body>
-</html>
+th,td{
+    padding:10px;
+}
