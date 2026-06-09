@@ -236,33 +236,117 @@ Advance to a specialized role as a Security-Focused Software Developer, leading 
 
 <div class="gallery">
 
+<!-- PROJECT 1: Constellation Stellar AR -->
 <div class="project">
 
-<img src="images/project1.jpg" alt="Constellation Stellar AR Project">
+<div class="slideshow-container">
+
+<div class="slide fade">
+<img src="images/project1.jpg" alt="Constellation Stellar AR - Slide 1">
+</div>
+
+<div class="slide fade">
+<img src="images/project1-slide2.jpg" alt="Constellation Stellar AR - Slide 2">
+</div>
+
+<div class="slide fade">
+<img src="images/project1-slide3.jpg" alt="Constellation Stellar AR - Slide 3">
+</div>
+
+<!-- Navigation Arrows -->
+<a class="prev" onclick="changeSlide(-1, this)">&#10094;</a>
+<a class="next" onclick="changeSlide(1, this)">&#10095;</a>
+
+</div>
+
+<!-- Dots for Slide Indicators -->
+<div class="dots">
+<span class="dot" onclick="currentSlide(1, this)"></span>
+<span class="dot" onclick="currentSlide(2, this)"></span>
+<span class="dot" onclick="currentSlide(3, this)"></span>
+</div>
 
 <h3>Constellation Stellar AR</h3>
-
 <p>Augmented Reality Application | Unity & Vuforia</p>
+<div class="project-info">
+<p>An interactive AR application that allows users to explore constellations in the night sky. Built with Unity and Vuforia technology for immersive astronomical learning experience.</p>
+</div>
 
 </div>
 
+<!-- PROJECT 2: Mandarin Learning App -->
 <div class="project">
 
-<img src="images/project2.jpg" alt="Mandarin Learning App">
+<div class="slideshow-container">
+
+<div class="slide fade">
+<img src="images/project2.jpg" alt="Mandarin Learning App - Slide 1">
+</div>
+
+<div class="slide fade">
+<img src="images/project2-slide2.jpg" alt="Mandarin Learning App - Slide 2">
+</div>
+
+<div class="slide fade">
+<img src="images/project2-slide3.jpg" alt="Mandarin Learning App - Slide 3">
+</div>
+
+<!-- Navigation Arrows -->
+<a class="prev" onclick="changeSlide(-1, this)">&#10094;</a>
+<a class="next" onclick="changeSlide(1, this)">&#10095;</a>
+
+</div>
+
+<!-- Dots for Slide Indicators -->
+<div class="dots">
+<span class="dot" onclick="currentSlide(1, this)"></span>
+<span class="dot" onclick="currentSlide(2, this)"></span>
+<span class="dot" onclick="currentSlide(3, this)"></span>
+</div>
 
 <h3>Mandarin Learning App</h3>
-
 <p>Interactive Educational Application | Adobe Animate</p>
+<div class="project-info">
+<p>A comprehensive interactive learning application designed to teach Mandarin Chinese. Features animated lessons, pronunciation guides, and interactive exercises for effective language acquisition.</p>
+</div>
 
 </div>
 
+<!-- PROJECT 3: E-Kasih 3D Animation -->
 <div class="project">
 
-<img src="images/project3.jpg" alt="E-Kasih 3D Animation">
+<div class="slideshow-container">
+
+<div class="slide fade">
+<img src="images/project3.jpg" alt="E-Kasih 3D Animation - Slide 1">
+</div>
+
+<div class="slide fade">
+<img src="images/project3-slide2.jpg" alt="E-Kasih 3D Animation - Slide 2">
+</div>
+
+<div class="slide fade">
+<img src="images/project3-slide3.jpg" alt="E-Kasih 3D Animation - Slide 3">
+</div>
+
+<!-- Navigation Arrows -->
+<a class="prev" onclick="changeSlide(-1, this)">&#10094;</a>
+<a class="next" onclick="changeSlide(1, this)">&#10095;</a>
+
+</div>
+
+<!-- Dots for Slide Indicators -->
+<div class="dots">
+<span class="dot" onclick="currentSlide(1, this)"></span>
+<span class="dot" onclick="currentSlide(2, this)"></span>
+<span class="dot" onclick="currentSlide(3, this)"></span>
+</div>
 
 <h3>E-Kasih 3D Animation</h3>
-
 <p>Professional 3D Animation | Autodesk Maya</p>
+<div class="project-info">
+<p>A professionally produced 3D animation project created with Autodesk Maya. Demonstrates advanced modeling, texturing, lighting, and rendering techniques for cinematic quality animation.</p>
+</div>
 
 </div>
 
@@ -346,6 +430,46 @@ I am a dedicated professional with exceptional learning agility and a strong wor
 </p>
 
 </footer>
+
+<!-- SLIDESHOW SCRIPT -->
+<script>
+let slideIndex = {};
+
+function changeSlide(n, element) {
+  const project = element.closest('.project');
+  const projectIndex = Array.from(project.parentElement.children).indexOf(project);
+  if (!slideIndex[projectIndex]) slideIndex[projectIndex] = 1;
+  showSlides(slideIndex[projectIndex] += n, project);
+}
+
+function currentSlide(n, element) {
+  const dot = element;
+  const project = dot.closest('.project');
+  const projectIndex = Array.from(project.parentElement.children).indexOf(project);
+  slideIndex[projectIndex] = n;
+  showSlides(n, project);
+}
+
+function showSlides(n, project) {
+  const slides = project.querySelectorAll('.slide');
+  const dots = project.querySelectorAll('.dot');
+  
+  if (n > slides.length) { slideIndex[Array.from(project.parentElement.children).indexOf(project)] = 1; }
+  if (n < 1) { slideIndex[Array.from(project.parentElement.children).indexOf(project)] = slides.length; }
+  
+  slides.forEach(slide => slide.style.display = 'none');
+  dots.forEach(dot => dot.classList.remove('active'));
+  
+  slides[slideIndex[Array.from(project.parentElement.children).indexOf(project)] - 1].style.display = 'block';
+  dots[slideIndex[Array.from(project.parentElement.children).indexOf(project)] - 1].classList.add('active');
+}
+
+// Initialize slideshows
+document.querySelectorAll('.project').forEach((project, index) => {
+  slideIndex[index] = 1;
+  showSlides(1, project);
+});
+</script>
 
 </body>
 </html>
