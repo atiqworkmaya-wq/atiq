@@ -1,3 +1,4 @@
+@@ -1,751 +1,772 @@
 *{
 margin:0;
 padding:0;
@@ -233,7 +234,7 @@ z-index:1;
 }
 
 .card p{
-color:#0f172a;
+color:#cbd5e1;
 line-height:1.8;
 margin-bottom:25px;
 font-size:15px;
@@ -256,7 +257,7 @@ z-index:1;
 }
 
 .card ul li{
-color:#0f172a;
+color:#cbd5e1;
 margin-bottom:12px;
 padding-left:25px;
 line-height:1.7;
@@ -275,14 +276,6 @@ font-size:18px;
 color:#7dd3fc;
 padding-left:30px;
 }
-#career .card{
-    background:#aafdff;
-    padding:30px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.1);
-    line-height:1.8;
-}
-
 
 /* SKILLS SECTION CONTAINER */
 .skills-container{
@@ -310,6 +303,8 @@ border-bottom:2px solid #38bdf8;
 }
 
 .skill{
+max-width:700px;
+margin:auto;
 max-width:100%;
 }
 
@@ -341,6 +336,8 @@ transition:width 0.5s ease;
 /* SKILLS TABLE STYLES */
 .skills-table{
 width:100%;
+max-width:900px;
+margin:50px auto 0;
 max-width:100%;
 margin:0 auto;
 border-collapse:collapse;
@@ -411,6 +408,21 @@ background:rgba(30, 41, 59, 0.5);
 
 .skills-table tr:nth-child(odd) td{
 background:rgba(51, 65, 85, 0.3);
+}
+
+@media(max-width:768px){
+.skills-table{
+font-size:12px;
+}
+
+.skills-table th,
+.skills-table td{
+padding:12px 15px;
+}
+
+.skills-table th{
+font-size:12px;
+}
 }
 
 .timeline{
@@ -777,4 +789,4 @@ padding:12px 15px;
 font-size:12px;
 }
 
-
+}
