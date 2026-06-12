@@ -283,32 +283,7 @@ padding-left:30px;
     line-height:1.8;
 }
 
-#career h3{
-    color:#0d6efd;
-    margin-bottom:15px;
-}
 
-#career h4{
-    margin-top:25px;
-    color:#333;
-    border-left:4px solid #0d6efd;
-    padding-left:10px;
-}
-
-#career ul{
-    padding-left:20px;
-}
-
-#career li{
-    margin-bottom:8px;
-}
-
-#career hr{
-    border:none;
-    height:1px;
-    background:#ddd;
-    margin:25px 0;
-}
 /* SKILLS SECTION CONTAINER */
 .skills-container{
 display:grid;
